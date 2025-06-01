@@ -293,26 +293,12 @@ function show_products_to_user(){
 
         id_ele.innerText = product.id;
         title_ele.innerText = product.title;
-        price_ele.innerText = product.price;
+        price_ele.innerText = `$${product.price}`;
         img_ele.src = product.image;
-        img_ele.style.height = "auto";
-        img_ele.style.width = "200px";
-        product_card.append(id_ele,title_ele,price_ele,img_ele);
-        product_card.style.border = "2px solid black";
-        product_card.style.margin = "20px";
-        product_card.style.textAlign = "center";
-        product_card.style.padding = "30px";
-        product_card.style.height = "auto";
-        product_card.style.width = "40vw";
-        product_card.style.backgroundColor = "lightblue";
-        product_card.style.display = "flex";
-        product_card.style.flexDirection = "column";
-        product_card.style.alignItems = "center";
-
+        img_ele.alt = product.title;
+        
+        product_card.append(id_ele, title_ele, price_ele, img_ele);
         main_div.append(product_card);
-        main_div.style.display = "flex";
-        main_div.style.justifyContent = "center";
-        main_div.style.flexWrap = "wrap";
     });
 }
 
